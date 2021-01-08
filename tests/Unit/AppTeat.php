@@ -93,7 +93,7 @@ class AppTeat extends \PHPUnit\Framework\TestCase
             'owner_id' => 45799194,
             'name' => '金蝶星空',
             'platform' => 'jindiexingkong',
-            'config' => ['user_name' => 'super11', 'password' => '123456'],
+            'config' => ['user_name' => 'super', 'password' => '123456'],
             'app_key' => 'super11',
         ];
 
