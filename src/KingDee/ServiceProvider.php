@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Cblink\Service\PosServiceSdk\Jdxk;
+namespace Cblink\Service\PosServiceSdk\KingDee;
 
 
 use Pimple\Container;
@@ -12,7 +12,7 @@ class ServiceProvider implements ServiceProviderInterface
 
     public function register(Container $pimple)
     {
-        $pimple['jdxk'] = function ($app){
+        $pimple['kingDee'] = function ($app){
             return new Client($app);
         };
     }

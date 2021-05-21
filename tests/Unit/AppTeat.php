@@ -25,14 +25,14 @@ class AppTeat extends \PHPUnit\Framework\TestCase
 
     protected function setUp(): void
     {
-//        $config = [
-//            'private' => true,
-//            'debug' => true,
-//            'base_url' => "http://dev-pos.service.cblink.net",
-//            'app_id' => 45799194,
-//            'secret' => "9Y6SjBWd2XHzVMWQbnkCJsiXllFh1p",
-//            'key' => "aSKqxSMg3M",
-//        ];
+        $config = [
+            'private' => true,
+            'debug' => true,
+            'base_url' => "",
+            'app_id' => '',
+            'secret' => "",
+            'key' => "",
+        ];
 
         $fileName = __DIR__ . '/../../BaseConfig.php';
         if (file_exists($fileName)){
@@ -47,15 +47,24 @@ class AppTeat extends \PHPUnit\Framework\TestCase
     public function testCreateApp()
     {
         $data = [
-            'owner_id' => 45799194,
-            'name' => '金蝶星空云',
-            'platform' => 'jindiexingkong',
-            'config' => ['user_name' => 'super', 'password' => '123456'],
-            'app_key' => 'super',
+            'config' => [
+                'lcid' => 1,
+                'debug' => true,
+                'org_id' => 1,
+                'secret' => '1',
+                'app_key' => '1',
+                'acct_id' => '1',
+                'password' => '1',
+                'user_name' => '1',
+                'access_key' => '1',
+            ],
+            'owner_id' => 1,
+            'name' => '1',
+            'platform' => '1',
+            'app_key' => '1'
         ];
 
-        // $res = $this->pos->app->create($data);
-
+//         $res = $this->pos->app->create($data);var_dump($res);exit;
         $client = \Mockery::mock($this->pos->app);
 
         $client->expects()
@@ -92,7 +101,7 @@ class AppTeat extends \PHPUnit\Framework\TestCase
         $data = [
             'owner_id' => 45799194,
             'name' => '金蝶星空',
-            'platform' => 'jindiexingkong',
+            'platform' => 'JinDieXingKong',
             'config' => ['user_name' => 'super', 'password' => '123456'],
             'app_key' => 'super11',
         ];

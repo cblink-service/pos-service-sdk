@@ -7,7 +7,7 @@ use Cblink\Service\Kennel\ServiceContainer;
 /**
  * Class Application
  * @package Cblink\Service\Shop
- * @property-read Jdxk\Client $jdxk
+ * @property-read KingDee\Client $kingDee
  * @property-read App\Client $app
  */
 class Application extends ServiceContainer
@@ -19,7 +19,7 @@ class Application extends ServiceContainer
     protected function getCustomProviders(): array
     {
         return [
-            Jdxk\ServiceProvider::class,
+            KingDee\ServiceProvider::class,
             App\ServiceProvider::class,
         ];
     }
