@@ -12,7 +12,7 @@ namespace Tests\Unit;
 
 
 
-use Cblink\Service\PosServiceSdk\Application;
+use Cblink\Service\PosServiceSdk\AppPos;
 use PHPUnit\Framework\MockObject\Api;
 
 class AppTeat extends \PHPUnit\Framework\TestCase
@@ -41,7 +41,7 @@ class AppTeat extends \PHPUnit\Framework\TestCase
 
         $this->uuid = $config['uuid'];
 
-        $this->pos = new Application($config['config']);
+        $this->pos = new AppPos($config['config']);
     }
 
     public function testCreateApp()

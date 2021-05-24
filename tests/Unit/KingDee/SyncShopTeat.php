@@ -13,7 +13,7 @@ namespace Tests\Unit\KingDee;
 
 
 use App\Services\KingDeeSSPosService;
-use Cblink\Service\PosServiceSdk\Application;
+use Cblink\Service\PosServiceSdk\AppPos;
 use PHPUnit\Framework\MockObject\Api;
 
 class SyncShopTeat extends \PHPUnit\Framework\TestCase
@@ -41,7 +41,7 @@ class SyncShopTeat extends \PHPUnit\Framework\TestCase
         }
         $this->appId = $config['uuid'];
 
-        $this->pos = new Application($config['config']);
+        $this->pos = new AppPos($config['config']);
     }
 
     /**

@@ -10,7 +10,7 @@ use Cblink\Service\Kennel\ServiceContainer;
  * @property-read KingDee\Client $kingDee
  * @property-read App\Client $app
  */
-class Application extends ServiceContainer
+class AppPos extends ServiceContainer
 {
 
     /**
